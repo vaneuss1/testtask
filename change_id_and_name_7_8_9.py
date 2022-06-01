@@ -5,7 +5,6 @@ from sys import argv
 
 def reverse_id(file_name):
     root = ET.parse(os.path.abspath(file_name))
-    encodings = 'utf-8'
     reverse_ids = list(reversed([tag.get('id') for tag in root.findall('image')]))
     for tag in root.findall('image'):
         new_format = 'png'
